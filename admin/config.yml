@@ -1,0 +1,20 @@
+backend:
+  name: git-gateway
+  branch: main # Make sure your GitHub branch is actually named "main" (or change this to "master" if it's master)
+
+media_folder: "uploads"
+public_folder: "/uploads"
+
+collections:
+  - name: "blog"
+    label: "Session Logs"
+    folder: "posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Featured Image", name: "thumbnail", widget: "image", required: false}
+      - {label: "Excerpt (Short Summary)", name: "excerpt", widget: "text"}
+      - {label: "YouTube Embed Link", name: "youtube_link", widget: "string", required: false}
+      - {label: "Blog Content", name: "body", widget: "markdown"}
