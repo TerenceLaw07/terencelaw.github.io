@@ -152,10 +152,10 @@
     opacity: 0; animation: fadeUp 1.2s ease 1.5s forwards;
   }
   .hero-scroll span {
-    font-size: 10px; letter-spacing: 3px;
-    text-transform: uppercase; color: var(--gray);
+    display: none; font-size: 10px;
   }
   .scroll-line {
+    display: none;
     width: 1px; height: 50px;
     background: linear-gradient(to bottom, var(--gold), transparent);
     animation: scrollPulse 2s ease-in-out infinite;
@@ -317,10 +317,7 @@
     <p class="hero-byline">Musician &nbsp;|&nbsp; Audio Engineer &nbsp;|&nbsp; Producer</p>
   </div>
 
-  <div class="hero-scroll">
-    <span>Scroll</span>
-    <div class="scroll-line"></div>
-  </div>
+
 </section>
 
 <section id="listen">
