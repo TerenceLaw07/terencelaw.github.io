@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<title>The Art of the Mix | Terence Law</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+  :root{--gold:#C9A84C;--black:#0A0A0A;--white:#F5F5F5;--gray:#888;--nav-h:70px;}
+  body{background:var(--black);color:var(--white);font-family:'Inter',sans-serif;overflow-x:hidden;}
+  nav{position:fixed;top:0;left:0;right:0;height:var(--nav-h);display:flex;align-items:center;justify-content:space-between;padding:0 48px;z-index:100;background:linear-gradient(to bottom,rgba(10,10,10,0.95),transparent);}
+  .nav-logo{font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:3px;color:var(--gold);text-decoration:none;}
+  .nav-links{display:flex;gap:40px;list-style:none;}
+  .nav-links a{color:var(--gray);text-decoration:none;font-size:12px;letter-spacing:2px;text-transform:uppercase;transition:color 0.3s;}
+  .nav-links a:hover,.nav-links a.active{color:var(--gold);}
+  .article-header{padding:140px 48px 48px;max-width:860px;margin:0 auto;}
+  .back-link{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--gray);text-decoration:none;display:inline-flex;align-items:center;gap:8px;margin-bottom:36px;transition:color 0.3s;}
+  .back-link:hover{color:var(--gold);}
+  .post-eyebrow{font-size:11px;letter-spacing:4px;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:10px;}
+  .post-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(40px,6vw,72px);letter-spacing:2px;color:var(--white);line-height:1.05;margin-bottom:6px;}
+  .post-byline{font-size:13px;color:var(--gold);letter-spacing:1px;margin-bottom:6px;font-style:italic;display:block;}
+  .post-date{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:#555;display:block;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,0.07);margin-bottom:48px;}
+  .article-body{max-width:760px;margin:0 auto;padding:0 48px 100px;}
+  .article-body p{font-size:15px;color:#ccc;line-height:1.9;margin-bottom:20px;}
+  .article-body h2{font-family:'Bebas Neue',sans-serif;font-size:32px;letter-spacing:2px;color:var(--white);margin:56px 0 20px;padding-bottom:10px;border-bottom:1px solid rgba(255,255,255,0.08);}
+  .article-body h2.section-major{font-size:40px;color:var(--gold);letter-spacing:3px;margin:72px 0 24px;border-bottom:2px solid rgba(201,168,76,0.35);padding-bottom:14px;}
+  .article-body img{max-width:100%;border-radius:3px;margin:28px 0;border:1px solid rgba(255,255,255,0.1);display:block;}
+  .article-body .fig-caption{font-size:12px;color:var(--gold);letter-spacing:1px;text-align:center;font-style:italic;margin:-14px 0 30px;opacity:0.85;line-height:1.5;}
+  .article-body blockquote{border-left:2px solid var(--gold);padding:12px 20px;margin:28px 0;color:#999;font-style:italic;}
+  .article-body ul,.article-body ol{padding-left:20px;margin-bottom:20px;}
+  .article-body li{font-size:15px;color:#ccc;line-height:1.9;margin-bottom:8px;}
+  .article-body strong{color:var(--white);font-weight:600;}
+  .article-body a{color:var(--gold);text-decoration:none;border-bottom:1px solid rgba(201,168,76,0.3);word-break:break-word;}
+  .article-body a:hover{border-bottom-color:var(--gold);}
+  .yt-wrap{position:relative;padding-bottom:56.25%;height:0;margin:40px 0;border:1px solid rgba(201,168,76,0.25);border-radius:3px;overflow:hidden;background:#111;}
+  .yt-wrap iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0;}
+  footer{padding:40px 48px;border-top:1px solid rgba(255,255,255,0.06);display:flex;justify-content:space-between;}
+  footer p,footer a{font-size:12px;color:var(--gray);text-decoration:none;letter-spacing:1px;}
+  @media(max-width:768px){nav,.article-header,.article-body{padding-left:24px;padding-right:24px;}}
+</style>
+</head>
+<body>
+<nav>
+  <a href="../index.html" class="nav-logo">TL</a>
+  <ul class="nav-links">
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="../services.html">Services</a></li>
+    <li><a href="../blog.html" class="active">Blog</a></li>
+    <li><a href="../contact.html">Contact</a></li>
+  </ul>
+</nav>
+<header class="article-header">
+  <a href="../blog.html" class="back-link">&#8592; Back to Blog</a>
+  <span class="post-eyebrow">Mixing Log</span>
+  <h1 class="post-title">The Art of the Mix</h1>
+  <span class="post-byline">Terence Law &mdash; Recording &amp; Mixing Engineer</span>
+  <span class="post-date">A Look Inside My Workflow &amp; Track-by-Track Techniques</span>
+</header>
+<article class="article-body">
+<p>All the songs I recorded, I followed some common practices amongst all of them and some unique ones. Common practices are needed because as a Mixing Engineer, I have some preferred workflows, and unique practices are necessary because every song is a new world of its own. This blog shares the common things and the new ones.</p>
+<h2 class="section-major">The Foundation: Common Techniques Across All Mixes</h2>
+<p>My overarching mixing philosophy is simple: <strong>cleanup before color.</strong> If you don't remove the mud, manage the harsh highs, and clear the crowded lower-mids first, adding saturation, distortion, and character will only amplify the mess. Cleanup allows the mix to breathe, paving the way for the creative &quot;dirtiness&quot; that gives a track its vibe.</p>
+<p>Here are the staple techniques and signal chains I used across almost all the tracks:</p>
+<h2>1. Acoustic Guitar Bus EQ</h2>
+<p>Regardless of the microphone array or technique used during tracking, my acoustic guitar bus almost always receives a foundational EQ curve. I apply a low-cut shelf to remove the low-end rumble below 100Hz. This eliminates proximity effect boominess and clears vital space for the kick and bass. I then apply a high-shelf boost at around 5.7kHz (Huff, no date). This specific frequency highlights the percussive attack of the pick and the natural &quot;air&quot; of the strings, ensuring the acoustic cuts through a dense mix without sounding brittle (McAllister, 2023). I don’t always do this using a parametric EQ. Sometimes I like to use a Pultec Style EQ.</p>
+<p><img src="/uploads/Mix-01.jpg" /></p>
+<p class="fig-caption"><em>Fig 1: Parametric EQ curve on the acoustic guitar bus</em></p>
+<p><img src="/uploads/Mix-02.jpg" /></p>
+<p class="fig-caption"><em>Fig 2: Pultec Style EQ on the acoustic guitar bus</em></p>
+<h2>2. The Kick/Snare Anchor (Drum Gain Staging)</h2>
+<p>Before I even touch a fader to begin gain staging, I instill strict organizational discipline by grouping related microphones into dedicated track stacks. I immediately pair the Kick In and Out, Snare Top and Bottom, Overheads Left and Right, and Room Left and Right into their own respective sub-groups (Rogers, 2023). This discipline instantly sorts out a dense session and makes all subsequent editing and bus processing significantly easier.</p>
+<p>Once the tracks are grouped, I build the entire kit around the relationship between the kick and the snare. These two elements form the rhythmic anchor of modern music. I focus intensely on their gain staging first, getting them to punch at the exact right levels. Only after I find a perfect, driving balance between the kick and snare do I bring up the overheads/Glyn Johns mics, hi-hats, toms, rooms, hall, Wurst, etc. to expand the stereo image (Avid, 2024). All of these are the colours added to the palette. Once the center is anchored, the rest of the kit naturally falls into place.</p>
+<div class="yt-wrap"><iframe src="https://www.youtube.com/embed/8hSKfHcfmJo" allowfullscreen allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture"></iframe></div>
+<h2>3. Dynamic Masking: Sidechaining for Vocal Clarity</h2>
+<p>Vocal clarity is non-negotiable. If a recording is highly transient-heavy (sharp snare cracks or aggressive cymbal hits), it can easily mask the lead vocal. To combat this, I frequently employ sidechain compression on the necessary tracks, using the main lead vocal as the trigger. For example, this means that every time the vocalist sings, the snare bus dips (ducks) by just 1 or 2 dB. It is entirely transparent to the listener, but it guarantees the vocal always remains front-and-center.</p>
+<p><img src="/uploads/Mix-03.jpg" /></p>
+<p class="fig-caption"><em>Fig 3: Sidechain compression on the snare bus triggered by the lead vocal</em></p>
+<p>I apply this exact same dynamic masking technique to my vocal reverb and delay buses. By sidechaining the spatial effects against the lead vocal, the reverb actively ducks out of the way while the artist is singing, keeping the lyrics crisp, dry, and intelligible. Then, the moment there is a pause in the vocal phrase, the compression releases, allowing the lush reverb tails to swell back up and beautifully fill the empty space in the arrangement (Sage Audio, no date).</p>
+<p><img src="/uploads/Mix-04.jpg" /></p>
+<p class="fig-caption"><em>Fig 4: Sidechain compression on the reverb and delay buses triggered by the lead vocal</em></p>
+<h2>4. Psychoacoustic Lifts: Bass Automation</h2>
+<p>A chorus needs to &quot;lift.&quot; One of my favorites, the trick I use to achieve this across almost all my mixes is automating the bass guitar. The main goal here is to provide a subtle boost to the low-end so as to give the chorus much more depth (Produce Like A Pro, 2022). By pushing the bass up by just 1 to 1.5 dB the chorus hits with a deep physical impact that makes the entire arrangement feel larger and wider.</p>
+<p><img src="/uploads/Mix-05.jpg" /></p>
+<p class="fig-caption"><em>Fig 5: Bass guitar volume automation in the chorus</em></p>
+<h2>5. Vocal Treatment and Pitch Healing</h2>
+<p>During tracking, my focus is always on capturing the perfect emotional take. Because of this, I rely on <strong>Melodyne</strong> during the mixing phase to do what I call &quot;pitch healing.&quot; I don't aggressively tune vocals to the grid (Samama, 2016). Instead, I bring the pitch slightly closer to the center, tame minor pitch drifts, and subtly modulate vibratos to keep the notes in range while perfectly preserving the raw emotion of the performance.</p>
+<p><img src="/uploads/Mix-06.jpg" /></p>
+<p class="fig-caption"><em>Fig 6: Pitch healing on the vocal track using Melodyne</em></p>
+<p>Additionally I relied on the <strong>iZotope RX De-plosive</strong> plugin at the very beginning of the vocal signal chains (specifically on Rachel and Emma’s tracks) to clean up low-end thumps (Martinovich, 2022). </p>
+<p><img src="/uploads/Mix-07.jpg" /></p>
+<p class="fig-caption"><em>Fig 7: iZotope RX De-plosive plugin at the beginning of the vocal signal chain</em></p>
+<p>This was always followed by careful <strong>De-Essing</strong> to keep the high-end smooth and pleasant (Tignor, 2026).</p>
+<p><img src="/uploads/Mix-08.jpg" /></p>
+<p class="fig-caption"><em>Fig 8: De-Esser applied to the vocal track to smooth the high-end</em></p>
+<h2>6. Grouping, Routing, and Track Stacks (Mix Bus)</h2>
+<p>Whether I am using Logic Pro (Track Stacks) or Pro Tools (Folders), my routing structure is highly organized. Guitars recorded with multiple microphones are immediately grouped into a stack, allowing me to do minimal processing on the individual mics and broader tonal shaping on the group bus (Stewart, 2021).</p>
+<p><img src="/uploads/Mix-09.jpg" /></p>
+<p class="fig-caption"><em>Fig 9: Multiple folders in Pro Tools</em></p>
+<p><img src="/uploads/Mix-10.jpg" /></p>
+<p class="fig-caption"><em>Fig 10: Multiple Stacks in Logic</em></p>
+<p>This is especially true for drums recorded using the <strong>Glyn Johns technique</strong>. On every mix featuring Glyn Johns drums, I route the overheads into their own sub-stack inside the main drum bus. A staple move on this overhead stack is adding a <strong>high-shelf EQ boost at around 2700 Hz</strong> to introduce sheen, air, and clarity to the cymbals and the room.</p>
+<p><img src="/uploads/Mix-11.jpg" /></p>
+<p class="fig-caption"><em>Fig 11: Glyn Johns overheads routed into a dedicated sub-stack inside the main drum bus</em></p>
+<p><img src="/uploads/Mix-12.jpg" /></p>
+<p class="fig-caption"><em>Fig 12: High-shelf EQ boost at 2700 Hz on the overhead stack</em></p>
+<h2>7. Depth, Space, and Parallel Processing</h2>
+<p>I rely heavily on aux tracks for spatial effects and parallel processing (Bigwood, 2011):</p>
+<ul>
+<li><strong>Reverbs &amp; Delays:</strong> My go-to sends include <strong>Valhalla Room</strong> (for long spatial decays), </li>
+</ul>
+<p><img src="/uploads/Mix-13.jpg" /></p>
+<p class="fig-caption"><em>Fig 13: Valhalla Room aux send for long spatial decays</em></p>
+<p><strong>UAD Pure Plate</strong> (the most dependable plate reverb I've ever heard), </p>
+<p><img src="/uploads/Mix-14.jpg" /></p>
+<p class="fig-caption"><em>Fig 14: UAD Pure Plate reverb aux send</em></p>
+<p>and <strong>Logic’s Tape Delay</strong>.</p>
+<p><img src="/uploads/Mix-15.jpg" /></p>
+<p class="fig-caption"><em>Fig 15: Logic's Tape Delay aux send</em></p>
+<p>For a general, catch-all reverb, <strong>Valhalla VintageVerb</strong> is unbeatable.</p>
+<p><img src="/uploads/Mix-16.jpg" /></p>
+<p class="fig-caption"><em>Fig 16: Valhalla VintageVerb when put directly on the signal chain</em></p>
+<p>A crucial step on all these auxes is applying a strict low-cut EQ after the reverb plugin to prevent the low-mids from muddying up the track (White, 2020).</p>
+<p><img src="/uploads/Mix-17.jpg" /></p>
+<p class="fig-caption"><em>Fig 17: Strict low-cut EQ applied after the reverb plugin on the reverb aux</em></p>
+<ul>
+<li><strong>Modulation:</strong> I frequently set up a dedicated Chorus aux track to send various guitars to for added width and movement.</li>
+</ul>
+<p><img src="/uploads/Mix-18.jpg" /></p>
+<p class="fig-caption"><em>Fig 18: Dedicated Chorus aux track for width and movement</em></p>
+<ul>
+<li><strong>Parallel Compression:</strong> For adding serious girth and weight to drums and bass, I use the Waves V-Comp, an incredible emulation of a classic stereo diode-bridge compressor (Robjohns, 2013).</li>
+</ul>
+<p><img src="/uploads/Mix-19.jpg" /></p>
+<p class="fig-caption"><em>Fig 19: Waves V-Comp applied for parallel compression on drums and bass</em></p>
+<ul>
+<li><strong>Parallel Saturation (The Glue)</strong></li>
+</ul>
+<p>As my mixes progressed, I found myself utilizing a dedicated Parallel Saturation bus across multiple projects (specifically <em>Thunder</em>, <em>Lock/Key</em>, and <em>Brown Suit</em>) (Rogers, 2021). By sending the drums, rhythm guitars, and occasionally the bass to a heavily driven saturation bus I was able to introduce incredible analog warmth, harmonic density, and cohesive &quot;glue&quot; without destroying the original transients.</p>
+<p>The signal chain for this bus is highly deliberate. It begins with <strong>FabFilter Saturn 2</strong>, where I drive the entire frequency spectrum to 30% using the &quot;Warm Tube&quot; style to generate thick, even-order harmonics. Next, I place an EQ to apply a strict low-cut at around 100 Hz, stripping away any low-end rumble that the distortion might have amplified. Finally, to lock the texture in place, I run the signal through an <strong>1176 compressor</strong> set to a 4:1 ratio, utilizing a medium attack and a fast release. I drive the input hard enough to hit about 5dB of gain reduction, creating a dense, controlled block of harmonic excitement that I can subtly blend underneath the clean, dynamic tracks (Streaky, 2024). </p>
+<p><img src="/uploads/Mix-20.jpg" /></p>
+<p class="fig-caption"><em>Fig 20: FabFilter Saturn 2</em></p>
+<p><img src="/uploads/Mix-21.jpg" /></p>
+<p class="fig-caption"><em>Fig 21: Parallel saturation bus</em></p>
+<h2>8. The Master Bus</h2>
+<p>To glue the tracks together and bring the loudness up to commercial standards, my mix bus chain remains highly consistent across all projects:</p>
+<ul>
+<li><strong>UAD Ampex ATR-102:</strong> For analog tape saturation, glue, and gentle roll-off.</li>
+</ul>
+<p><img src="/uploads/Mix-22.jpg" /></p>
+<p class="fig-caption"><em>Fig 22: UAD Ampex ATR-102 applied to the master bus for analog tape saturation</em></p>
+<ul>
+<li><strong>Sonnox Oxford Inflator:</strong> To increase harmonic density and perceived loudness without sacrificing transients (Sonnox, 2025).</li>
+</ul>
+<p><img src="/uploads/Mix-23.jpg" /></p>
+<p class="fig-caption"><em>Fig 23: Sonnox Oxford Inflator applied to the master bus for harmonic density</em></p>
+<ul>
+<li><strong>FabFilter Pro-L 2:</strong> The final brickwall limiter to transparently push the LUFS up to commercial levels (White Sea Studio, 2025).</li>
+</ul>
+<p><img src="/uploads/Mix-24.jpg" /></p>
+<p class="fig-caption"><em>Fig 24: FabFilter Pro-L 2 brickwall limiter applied to the master bus</em></p>
+<h2 class="section-major">Track-by-Track Breakdowns: The Unique Techniques</h2>
+<p>While the foundation remains the same, every song demands bespoke creative decisions. Here is a look at the unique approaches I took for each individual mix.</p>
+<h2>Rachel - Brown Suit</h2>
+<ul>
+<li><strong>Raw, Unprocessed Drums:</strong> Unlike modern pop tracks that require heavy drum processing, the drums on <em>Brown Suit</em> are incredibly raw. I used almost zero processing—just careful gain staging and a tiny bit of compression to let the natural acoustic kit breathe.</li>
+</ul>
+<p><img src="/uploads/Mix-25.jpg" /></p>
+<p class="fig-caption"><em>Fig 25: Minimal processing and compression on the raw acoustic drum kit</em></p>
+<ul>
+<li><strong>Healing the Guitars:</strong> The guitar tracks were sent to me post-recording by the producer and unfortunately contained problematic clicks and pops. Since re-recording wasn't an option, I had to meticulously heal the audio and EQ the amp tones in a way that masked the artifacts so they wouldn't translate into the final mix.</li>
+</ul>
+<ul>
+<li><strong>The MIDI Violin Trick:</strong> The song featured electric violins that sounded unpleasantly squeaky, but the artist wanted a lush, massive orchestral sound. To fix this, I ran the original violin audio through Logic’s Flex Pitch, extracted the pitch data, and converted it into MIDI (Apple Inc., no date). I then fed that MIDI data into the <strong>BBC Symphony Orchestra VST</strong>, assigning different violin articulations to each take. The result transformed a thin, squeaky recording into a massive, cinematic string section (Ball, 2018).</li>
+</ul>
+<p><img src="/uploads/Mix-26.jpg" /></p>
+<p class="fig-caption"><em>Fig 26: Violin pitch data extracted via Logic's Flex Pitch and then converted to MIDI tracks</em></p>
+<p><img src="/uploads/Mix-27.jpg" /></p>
+<p class="fig-caption"><em>Fig 27: Extracted MIDI data routed to the BBC Symphony Orchestra VST</em></p>
+<ul>
+<li><strong>Softening the Harmonies (Enveloper):</strong></li>
+</ul>
+<p>The backing vocal harmonies were coming in a bit too aggressively, distracting from the lead. To fix this, I placed a transient shaper (Enveloper) on the harmony bus, pulling back the attack. This smoothed out their entry, allowing them to swell naturally into the mix rather than hitting the listener abruptly.</p>
+<p><img src="/uploads/Mix-28.jpg" /></p>
+<p class="fig-caption"><em>Fig 28: Enveloper transient shaper pulling back the attack on the backing vocal harmony bus</em></p>
+<h2>Deadbeat Bracket - Just Friends</h2>
+<ul>
+<li><strong>The Pro Tools Architecture:</strong> This track was mixed in Pro Tools, utilizing native Pro Tools plugins. The tone was so well-established during the tracking phase that I intentionally kept processing to an absolute minimum.</li>
+</ul>
+<p><img src="/uploads/Mix-29.jpg" /></p>
+<p class="fig-caption"><em>Fig 29: The Pro Tools session</em></p>
+<ul>
+<li><strong>Massive Folder Routing:</strong> The mix was entirely about balancing massive groups. I utilized Pro Tools' Folder functionality heavily: a massive folder for Rhythm Guitars (and their double tracks), Solo Guitars (and DTs), Bass, and Drums (which contained sub-folders for kick, snare, overheads, and room). The mix was built methodically from the inside out—treating the individual elements, then the subgroups, and finally the massive folders.</li>
+</ul>
+<p><img src="/uploads/Mix-30.jpg" /></p>
+<p class="fig-caption"><em>Fig 30: Pro Tools folder routing structure for rhythm guitars, bass, and drums</em></p>
+<ul>
+<li><strong>Using Slap Back Delay for Vocal Presence:</strong> <em>Just Friends</em> is a heavy, guitar-driven punk record, which meant the lead vocal was constantly fighting against a massive wall of distorted guitars. I wanted to bring the vocals out and make them sound focused and &quot;in front&quot; of the mix, but simply applying a big gain boost would have eaten up my headroom and disrupted the balance. Instead, I used a slap delay. By sending the vocal to a very short, fast delay tucked subtly underneath the dry signal, it creates a psychoacoustic effect that pulls the vocal forward. It gives the voice an aggressive, present edge that cuts perfectly through the dense guitars without washing it out like a long reverb would (Templeton, 2020).</li>
+</ul>
+<p><img src="/uploads/Mix-31.jpg" /></p>
+<p class="fig-caption"><em>Fig 31: Slap Back Delay</em></p>
+<h2>Joey Bonito - It's Getting Late</h2>
+<ul>
+<li><strong>Carving the Low-Mids:</strong> This indie track was a little low-mid heavy, with drums, vocals, acoustic guitars, and a prominently featured piano all fighting for the same frequency real estate. I needed to harness the piano's warmth without making the mix muddy (a problem I didn't have in <em>Brown Suit</em>, where the piano didn't have so much low end build up). I solved this dilemma by doing a big cut from the low mids in the Acoustic Guitars.</li>
+</ul>
+<ul>
+<li><strong>Piano Excitation and Dynamic EQ:</strong> The piano was tracked in A/B stereo with U87s. To make it cut through, I applied Logic’s <strong>Exciter</strong> plugin to both the individual L/R channels and the piano stack to generate upper harmonics. I then used a <strong>Dynamic EQ with a notch at 380 Hz</strong>. This tamed the mud only when the frequencies built up too much, keeping the piano sounding full and rich without masking the vocal.</li>
+</ul>
+<p><img src="/uploads/Mix-32.jpg" /></p>
+<p class="fig-caption"><em>Fig 32: Logic's Exciter plugin generating upper harmonics on the piano channels</em></p>
+<p><img src="/uploads/Mix-33.jpg" /></p>
+<p class="fig-caption"><em>Fig 33: Dynamic EQ notch at 380 Hz on the piano stack</em></p>
+<ul>
+<li><strong>The Gibberish Intro:</strong> During tracking, Joey mumbled some gibberish into the mic that had a great sonic texture. As a creative mixing decision, I chopped that specific phrase and placed it at the very beginning of the track. Joey loved it, and it became the official intro to the song.</li>
+</ul>
+<h2>Thomas Lee - Lock/Key</h2>
+<ul>
+<li><strong>The Great Phase Flip:</strong> Upon checking phase correlation, I realized the entire bass stack was completely out of phase with the guitar stack. During the tracking session, the bass amp and guitar amp had been facing opposite directions in the live room. To fix the low-end cancellation, I had to flip the phase on the entire bass track stack.</li>
+</ul>
+<p><img src="/uploads/Mix-34.jpg" /></p>
+<p class="fig-caption"><em>Fig 34: Phase flip engaged on the entire bass track stack</em></p>
+<ul>
+<li><strong>Mixing a Baritone:</strong> Thomas has a rich, low baritone voice, and the instrumental arrangement was also heavily focused in the low-mids. Getting the lead vocal to sit up front without gutting the instruments required a very long, precise vocal signal chain to carve out exact frequencies.</li>
+</ul>
+<p><img src="/uploads/Mix-35.jpg" /></p>
+<p class="fig-caption"><em>Fig 35: Vocal chain fused for Thomas Lee</em></p>
+<ul>
+<li><strong>Automating Reverbs and Delays:</strong> The arrangement of <em>Lock/Key</em> features a lot of empty, atmospheric space. To make the track feel dynamic, I heavily automated the Valhalla Room and Tape Delay aux sends, pushing the spatial effects up in the empty pockets and pulling them back when the vocal was active (Subphotic, 2025).</li>
+</ul>
+<p><img src="/uploads/Mix-36.jpg" /></p>
+<p class="fig-caption"><em>Fig 36: Automation of the Valhalla Room aux send</em></p>
+<p><img src="/uploads/Mix-37.jpg" /></p>
+<p class="fig-caption"><em>Fig 37: Automation of the Tape Delay aux send</em></p>
+<ul>
+<li><strong>Aggressive Drum Compression (RVox):</strong> To get the drums to punch through the dense low-mid arrangement, I compressed the drum bus using Waves RVox. While traditionally a vocal compressor, RVox applies a highly aggressive, forward-sounding compression and introduces a great gating effect that makes drum rooms sound explosive (Dirty Sounds Clean, 2024).</li>
+</ul>
+<p><img src="/uploads/Mix-38.jpg" /></p>
+<p class="fig-caption"><em>Fig 38: Aggressive compression on the drum bus using Waves RVox</em></p>
+<h2>Emma Slany - Thunder</h2>
+<ul>
+<li><strong>Snare Healing over Replacement:</strong> I originally wanted to trigger a different snare sample using the <strong>Waves InTrigger</strong> plugin because I wasn't entirely happy with the snare tone (Hanson, 2026). However, the trigger introduced massive phase issues with the overheads. I abandoned the replacement idea and instead used compression and EQ to shape the original snare audio, which ultimately worked beautifully.</li>
+</ul>
+<p><img src="/uploads/Mix-39.jpg" /></p>
+<p class="fig-caption"><em>Fig 39: Waves In-Trigger Interface</em></p>
+<ul>
+<li><strong>Synthesizing Sub-Bass:</strong> <em>Thunder</em> carries a lot of emotional weight, which needed to be anchored by deep low-end. The recorded bass guitar was great, but it lacked sub-frequencies. Using the same trick from <em>Brown Suit</em>, I converted the bass guitar audio to MIDI via Flex Pitch. I sent that MIDI to <strong>Logic’s Retro Synth</strong>, applied a steep low-pass filter, and blended this synthesized sub-bass perfectly underneath the live bass guitar for massive depth.</li>
+</ul>
+<p><img src="/uploads/Mix-40.jpg" /></p>
+<p class="fig-caption"><em>Fig 40: Synthesized sub-bass generated via Logic's Retro Synth</em></p>
+<ul>
+<li><strong>Matching Searows' &quot;Dirt&quot;:</strong> I loved the acoustic guitar tone on the song &quot;Dirt&quot; by Searows and wanted that exact vibe for Emma's acoustic. I used Logic's <strong>Match EQ</strong> to analyze the Searows track and applied that curve to our acoustic guitars, yielding a fantastic result (Pro Mix Academy, 2023).</li>
+</ul>
+<p><img src="/uploads/Mix-41.jpg" /></p>
+<p class="fig-caption"><em>Fig 41: Logic's Match EQ applying the Searows acoustic guitar curve</em></p>
+<ul>
+<li><strong>Vibing up the Keys:</strong> We tracked a very clean electric piano/synth part. To give it character and make it fit the aesthetic of the track, I processed it through the <strong>RC-20 Retro Color</strong> plugin, adding vinyl noise, saturation, and harmonic distortion (Pageau, 2023).</li>
+</ul>
+<p><img src="/uploads/Mix-42.jpg" /></p>
+<p class="fig-caption"><em>Fig 42: RC-20 Retro Color plugin processing the electric piano track</em></p>
+<h2>Samba - Face It</h2>
+<ul>
+<li><strong>Less is More:</strong> This track was all about restraint. I utilized very minimal processing, relying entirely on the foundational techniques mentioned earlier (good gain staging, slight EQ, and standard compression). The only notable creative addition was utilizing the Chorus aux track trick on the guitars to add a lush, wide shimmer to the arrangement.</li>
+</ul>
+<h2>References</h2>
+<p>Apple Inc. (no date) 'Create MIDI from audio using Flex Pitch in Logic Pro for Mac', <em>Apple Support</em>. Available at:<a href="https://support.apple.com/en-gb/guide/logicpro/lgcpe2fd1b83/mac"> https://support.apple.com/en-gb/guide/logicpro/lgcpe2fd1b83/mac</a> (Accessed: 15 August 2026).</p>
+<p>Audient (no date) 'How to manage low, mid and high frequencies in the mix', <em>Audient</em>. Available at:<a href="https://audient.com/tutorial/how-to-manage-low-mid-and-high-frequencies-in-the-mix/"> https://audient.com/tutorial/how-to-manage-low-mid-and-high-frequencies-in-the-mix/</a> (Accessed: 15 August 2026).</p>
+<p>Avid (2024) 'How to mix drums: a step-by-step guide', <em>Avid</em>, 19 September. Available at:<a href="https://www.avid.com/resource-center/mixing-drums"> https://www.avid.com/resource-center/mixing-drums</a> (Accessed: 15 August 2026).</p>
+<p>Ball, A. (2018) <em>My Big Fat Guide to using a Virtual Orchestra</em>. YouTube, 24 May. Available at:<a href="https://www.youtube.com/watch?v=wXgqiNtCfUg"> https://www.youtube.com/watch?v=wXgqiNtCfUg</a> (Accessed: 15 August 2026).</p>
+<p>Bigwood, R. (2011) 'Using aux sends &amp; returns', <em>Sound on Sound</em>, February. Available at:<a href="https://www.soundonsound.com/techniques/using-aux-sends-returns"> https://www.soundonsound.com/techniques/using-aux-sends-returns</a> (Accessed: 15 August 2026).</p>
+<p>Dirty Sounds Clean (2024) 'I never thought using RVOX on drums could be this effective' [Instagram Reel]. <em>Instagram</em>, October. Available at:<a href="https://www.instagram.com/reels/DBHHDzJRGIM/"> https://www.instagram.com/reels/DBHHDzJRGIM/</a> (Accessed: 15 August 2026).</p>
+<p>Hanson, R. (2026) 'Waves InTrigger drum replacer plug-in – a Mix real-world review', <em>Mix</em>, 26 February. Available at:<a href="https://www.mixonline.com/technology/reviews/plug-ins/waves-intrigger-drum-replacer-plug-in-a-mix-real-world-review"> https://www.mixonline.com/technology/reviews/plug-ins/waves-intrigger-drum-replacer-plug-in-a-mix-real-world-review</a> (Accessed: 15 August 2026).</p>
+<p>Hignell, A. (no date) 'Sidechain compression: 7 tips for better mixes', <em>Mixed In Key</em>. Available at:<a href="https://mixedinkey.com/captain-plugins/wiki/sidechain-compression-7-tips-for-better-mixes/"> https://mixedinkey.com/captain-plugins/wiki/sidechain-compression-7-tips-for-better-mixes/</a> (Accessed: 15 August 2026).</p>
+<p>Huff, C. (no date) 'EQ for an acoustic guitar', <em>Behind The Mixer</em>. Available at:<a href="https://www.behindthemixer.com/eq-acoustic-guitar/"> https://www.behindthemixer.com/eq-acoustic-guitar/</a> (Accessed: 14 August 2026).</p>
+<p>Johncy, J. (2025) 'How to use automation to create dynamic transitions in your mix', <em>Point Blank Music School</em>, 17 December. Available at:<a href="https://www.pointblankmusicschool.com/blog/how-to-use-automation-to-create-dynamic-transitions-in-your-mix/"> https://www.pointblankmusicschool.com/blog/how-to-use-automation-to-create-dynamic-transitions-in-your-mix/</a> (Accessed: 15 August 2026).</p>
+<p>Martinovich, A. (2022) 'How to remove plosives from a voice recording', <em>iZotope</em>, 5 October. Available at:<a href="https://www.izotope.com/community/blog/removing-plosives-from-a-voice-recording?srsltid=AfmBOop-6ZzZuviZgOU6FKwW5AxEZP11WFDLRhP62xu1woruplUKfDUl"> https://www.izotope.com/community/blog/removing-plosives-from-a-voice-recording?srsltid=AfmBOop-6ZzZuviZgOU6FKwW5AxEZP11WFDLRhP62xu1woruplUKfDUl</a> (Accessed: 15 August 2026).</p>
+<p>McAllister, M. (2023) 'How to EQ acoustic guitar in a mix', <em>Produce Like A Pro</em>, 2 April. Available at:<a href="https://producelikeapro.com/blog/how-to-eq-acoustic-guitar-in-a-mix/"> https://producelikeapro.com/blog/how-to-eq-acoustic-guitar-in-a-mix/</a> (Accessed: 14 August 2026).</p>
+<p>Moozix (2026) 'Reverb automation during mix: how to control space without drowning details', <em>Moozix</em>, 30 June. Available at:<a href="https://moozix.com/blog/reverb-automation-during-mix-how-to-control-space-without-drowning-details-6a43157f254dd"> https://moozix.com/blog/reverb-automation-during-mix-how-to-control-space-without-drowning-details-6a43157f254dd</a> (Accessed: 15 August 2026).</p>
+<p>Pageau, M. (2023) '5 creative uses for RC-20 by XLN Audio', <em>Internet Tattoo</em>, 4 September. Available at:<a href="https://www.internettattoo.com/blog/5-creative-use-for-rc-20-by-xln-audio"> https://www.internettattoo.com/blog/5-creative-use-for-rc-20-by-xln-audio</a> (Accessed: 15 August 2026).</p>
+<p>Pro Mix Academy (2023) 'Logic Pro Match EQ: what is it &amp; how does it work?', <em>Pro Mix Academy</em>, 23 August. Available at:<a href="https://promixacademy.com/blog/logic-pro-match-eq-what-is-it-how-does-it-work/"> https://promixacademy.com/blog/logic-pro-match-eq-what-is-it-how-does-it-work/</a> (Accessed: 15 August 2026).</p>
+<p>Produce Like A Pro (2022) <em>Automation Tricks To Make Your Chorus Sound Huge</em>. YouTube, 14 March. Available at:<a href="https://www.youtube.com/watch?v=VYb2FibLvps"> https://www.youtube.com/watch?v=VYb2FibLvps</a> (Accessed: 15 August 2026).</p>
+<p>Ricard, D. (2024) 'Logic Pro: Sends, buses &amp; auxes', <em>Sound on Sound</em>, June. Available at:<a href="https://www.soundonsound.com/techniques/logic-pro-sends-buses-auxes"> https://www.soundonsound.com/techniques/logic-pro-sends-buses-auxes</a> (Accessed: 15 August 2026).</p>
+<p>Robjohns, H. (2013) 'Parallel compression', <em>Sound on Sound</em>, February. Available at:<a href="https://www.soundonsound.com/techniques/parallel-compression"> https://www.soundonsound.com/techniques/parallel-compression</a> (Accessed: 15 August 2026).</p>
+<p>Rogers, N. (2021) 'Saturation strategies', <em>Sound on Sound</em>, May. Available at:<a href="https://www.soundonsound.com/techniques/saturation-strategies"> https://www.soundonsound.com/techniques/saturation-strategies</a> (Accessed: 15 August 2026).</p>
+<p>Sage Audio (no date) 'Sidechaining techniques', <em>Sage Audio</em>. Available at:<a href="https://www.sageaudio.com/articles/sidechaining-techniques"> https://www.sageaudio.com/articles/sidechaining-techniques</a> (Accessed: 15 August 2026).</p>
+<p>Samama, B. (2016) 'Tutorial: how to make pitch correction sound natural', <em>Sonicbids</em>, 23 February. Available at:<a href="https://blog.sonicbids.com/tutorial-how-to-make-pitch-correction-sound-natural"> https://blog.sonicbids.com/tutorial-how-to-make-pitch-correction-sound-natural</a> (Accessed: 15 August 2026).</p>
+<p>Skidmore, M. (2013) 'Pitch-correcting vocals with Melodyne', <em>Sound on Sound</em>, July. Available at:<a href="https://www.soundonsound.com/techniques/pitch-correcting-vocals-melodyne"> https://www.soundonsound.com/techniques/pitch-correcting-vocals-melodyne</a> (Accessed: 15 August 2026).</p>
+<p>Sonnox (2025) 'Oxford Inflator user guide', <em>Sonnox</em>. Available at:<a href="https://dload.sonnoxplugins.com/pub/plugins/UserGuides/Oxford_Inflator_User_Guide.html"> https://dload.sonnoxplugins.com/pub/plugins/UserGuides/Oxford_Inflator_User_Guide.html</a> (Accessed: 15 August 2026).</p>
+<p>Sonnox Plugins (2025) <em>The ULTIMATE Oxford Inflator tutorial</em>. YouTube, 22 September. Available at:<a href="https://www.youtube.com/watch?v=rDjDdGrk2uU"> https://www.youtube.com/watch?v=rDjDdGrk2uU</a> (Accessed: 15 August 2026).</p>
+<p>Stewart, I. (2021) 'Mix bus 101: why, when, and how to group tracks into a bus', <em>iZotope</em>, 16 December. Available at:<a href="https://www.izotope.com/community/blog/mix-buses-101?srsltid=AfmBOopBp1wF4cQyC0-FUZmL2gjPinh0WT9lU69dDFuxSAB4wwgo3rtT"> https://www.izotope.com/community/blog/mix-buses-101?srsltid=AfmBOopBp1wF4cQyC0-FUZmL2gjPinh0WT9lU69dDFuxSAB4wwgo3rtT</a> (Accessed: 15 August 2026).</p>
+<p>Streaky (2024) <em>Drum Buss Saturation Secret</em>. YouTube, 21 October. Available at:<a href="https://youtube.com/shorts/s78DVNsSU0o?si=A5Jq0lY1UqhlWi8l"> https://youtube.com/shorts/s78DVNsSU0o?si=A5Jq0lY1UqhlWi8l</a> (Accessed: 15 August 2026).</p>
+<p>Subphotic (2025) '5 mix automation tips: reverb, delay, and more', <em>Splice</em>, 13 May. Available at:<a href="https://splice.com/blog/mix-automation-tips/"> https://splice.com/blog/mix-automation-tips/</a> (Accessed: 15 August 2026).</p>
+<p>Templeton, S. (2020) 'Tips for mixing with slap delay', <em>Waves</em>, 7 May. Available at:<a href="https://www.waves.com/tips-for-mixing-with-slap-delay"> https://www.waves.com/tips-for-mixing-with-slap-delay</a> (Accessed: 15 August 2026).</p>
+<p>Thornton, M. (2014) 'Aux talk', <em>Sound on Sound</em>, September. Available at:<a href="https://www.soundonsound.com/techniques/aux-talk"> https://www.soundonsound.com/techniques/aux-talk</a> (Accessed: 15 August 2026).</p>
+<p>Tignor, C. (2026) 'What is a de-esser (and how do I use it for vocals)?', <em>Splice</em>, 23 April. Available at:<a href="https://splice.com/blog/what-is-a-de-esser/#WhatIsDeessing"> https://splice.com/blog/what-is-a-de-esser/#WhatIsDeessing</a> (Accessed: 15 August 2026).</p>
+<p>Universal Audio (no date) 'Ampex ATR-102 Master Tape Recorder Manual', <em>Universal Audio Support</em>. Available at:<a href="https://help.uaudio.com/hc/en-us/articles/28281608779540-Ampex-ATR-102-Master-Tape-Recorder-Manual"> https://help.uaudio.com/hc/en-us/articles/28281608779540-Ampex-ATR-102-Master-Tape-Recorder-Manual</a> (Accessed: 15 August 2026).</p>
+<p>Universal Audio (2024) <em>Master Your Mix with the Ampex ATR-102 Tape Plug-In</em>. YouTube, 23 August. Available at:<a href="https://www.youtube.com/watch?v=33atVtJTu3M"> https://www.youtube.com/watch?v=33atVtJTu3M</a> (Accessed: 15 August 2026).</p>
+<p>White, P. (2020) 'How to optimise your reverb treatments', <em>Sound on Sound</em>, November. Available at:<a href="https://www.soundonsound.com/techniques/how-optimise-your-reverb-treatments"> https://www.soundonsound.com/techniques/how-optimise-your-reverb-treatments</a> (Accessed: 15 August 2026).</p>
+<p>White Sea Studio (2025) <em>The ULTIMATE FabFilter Pro-L 2 tutorial!</em>. YouTube, June. Available at:<a href="https://www.youtube.com/watch?v=rModnMRN9NY"> https://www.youtube.com/watch?v=rModnMRN9NY</a> (Accessed: 15 August 2026).</p>
+
+</article>
+<footer>
+  <p>&copy; 2026 Terence Law. All rights reserved.</p>
+  <a href="../blog.html">Back to Blog</a>
+</footer>
+</body>
+</html>
